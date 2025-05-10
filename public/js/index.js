@@ -219,6 +219,7 @@ function showVerification() {
     let v_out = document.getElementById("verify_div");
     v_out.innerHTML = `<div class="v_wrapper">
             <div class="v_content">
+                <button id="close-btn" onclick="location.reload()">X</button>
                 <form onsubmit="sendVerify()">
                     <h2>Verification Code:</h2>
                     <h5>A verification code has been sent to your registered email address. Please check your inbox and enter the code below to complete the 
@@ -263,6 +264,7 @@ async function sendVerify() {
             v_out.innerHTML = `
                 <div class="v_wrapper">
                 <div class="v_content">
+                <button id="close-btn" onclick="location.reload()">X</button>
                     <h3>User is verified </h3>
                 </div>
             </div>
@@ -276,6 +278,7 @@ async function sendVerify() {
                 
                 <div class="v_wrapper">
                 <div class="v_content">
+                <button id="close-btn" onclick="location.reload()">X</button>
                     <form onsubmit="sendVerify()">
                         <h2>Verification Code:</h2>
                         <h3>The code dose not match , another code has been sent to you pls try againVerification code doesn't match. A new verification code has been sent to your email. Please try again.</h3>
@@ -294,6 +297,7 @@ async function sendVerify() {
                 
                 <div class="v_wrapper">
                 <div class="v_content">
+                <button id="close-btn" onclick="location.reload()">X</button>
                     <h3>The user account is already verified.</h3>
                 </div>
             </div>
@@ -308,6 +312,7 @@ async function sendVerify() {
                 
                 <div class="v_wrapper">
                 <div class="v_content">
+                <button id="close-btn" onclick="location.reload()">X</button>
                     <h3>Something went wrong </h3>
                 </div>
             </div>
@@ -381,6 +386,7 @@ function showForgotPass() {
     let v_out = document.getElementById("verify_div");
     v_out.innerHTML = `<div class="v_wrapper">
             <div class="v_content">
+            <button id="close-btn" onclick="location.reload()">X</button>
                 <form onsubmit="forgotPassSetup()">
                     <h2>Enter your email:</h2>
                     <h5>A verification code will been sent to your email address. </h5>
@@ -437,6 +443,7 @@ function showForgotPassVerify() {
     loading(false);
     v_out.innerHTML = `<div class="v_wrapper">
             <div class="v_content">
+            <button id="close-btn" onclick="location.reload()">X</button>
                 <form onsubmit="forgotPassSubmit()">
                     <h2>Verification Code:</h2>
                     <h5>A verification code has been sent to your registered email address.<br/> Please check your inbox and enter the code below to complete the process.</h5>
@@ -529,6 +536,7 @@ async function forgotPassSubmit() {
         if (response.status == 201) {
             v_out.innerHTML = `<div class="v_wrapper">
                 <div class="v_content">
+                <button id="close-btn" onclick="location.reload()">X</button>
                 <p>Password updated successfully.</p>
                 </div>
                 </div>`;

@@ -9,14 +9,16 @@ use App\Models\Otp;
 use App\Http\Controllers\API\DynamicTableController;
 use App\Mail\signin_verification_email_code;
 use App\Mail\forgot_pass;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
-use Auth;
+
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Carbon;
 use App\Models\personal_access_token;
 use App\Models\setting;
 use Throwable;
 use App\Models\Password_reset_token;
+
 
 /**
  * @OA\Tag(
